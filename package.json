@@ -9,6 +9,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sass": "^1.35.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -20,7 +21,8 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sass-loader": "^11.1.1"
   },
   "eslintConfig": {
     "extends": [
