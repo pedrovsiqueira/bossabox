@@ -1,0 +1,26 @@
+.btn {
+  font-size: $btn-font-size;
+  height: $btn-height;
+  width: $btn-width;
+  color: $btn-font-color;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 200ms linear;
+
+  &--blue {
+    background-color: $btn-blue;
+
+    &:hover {
+      background-color: darken($btn-blue, 10%);
+    }
+  }
+
+  &--red {
+    background-color: $btn-red;
+
+    &:hover {
+      background-color: darken($btn-red, 10%);
+    }
+  }
+}
