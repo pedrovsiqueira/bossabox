@@ -1,9 +1,10 @@
-import './App.scss';
+import './styles/index.scss';
+import { Button } from './components';
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Button color="blue">Save</Button>
     </div>
   );
 };
