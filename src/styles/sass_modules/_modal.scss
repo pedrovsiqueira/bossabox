@@ -1,0 +1,35 @@
+.react__modal__overlay {
+  background: $thm-overlay;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react__modal__content {
+  width: 100%;
+  max-width: 500px;
+  background: $thm-background;
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.24rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      align-self: flex-end;
+    }
+  }
+}
