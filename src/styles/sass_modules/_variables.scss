@@ -1,17 +1,35 @@
 $thm-background: #fff;
 $thm-link: #2497b2;
 $thm-text: #170c3a;
+$thm-overlay: rgba(0, 0, 0, 0.5);
 
 //Buttons
 $btn-font-size: 1rem;
-$btn-font-color: #fff;
 $btn-height: 3.1rem;
 $btn-width: 11rem;
+$btn-font-color: #fff;
 $btn-red: #f95e5a;
 $btn-blue: #365df0;
 
 //Inputs
-$input-placeholder: #b1adb9;
+$input-background-default: #f5f4f6;
+$input-background-focused: #dedce1;
+$input-background-text: #ebeaed;
+$input-text-placeholder: #b1adb9;
+$input-text-focused: #8f8a9b;
+$input-text: #170c3a;
+$input-error-background: #feefee;
+$input-error-border: #f95e5a;
+$input-error-text: #f95e5a;
 $input-height: 3.1rem;
-$input-width: 25rem;
-$input-color: #dedce1;
+$textarea-height: 11.25rem;
+
+//Home button
+$home-width: 43.75rem;
+
+//Tools
+$tools-width: 43.75rem;
+$tools-height: 17.18rem;
+$tools-border: #ebeaed;
+$tools-box-shadow: rgba(0, 0, 0, 0.05);
+$tools-title: #2497b2;
