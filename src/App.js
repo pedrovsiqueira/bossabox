@@ -1,13 +1,8 @@
 import './styles/index.scss';
-import { Button, Input } from './components';
+import { Home } from './pages/Home';
 
 const App = () => {
-  return (
-    <div className="App">
-      <Button color="blue">Save</Button>
-      <Input label="Tool name" placeholder="Please insert tool name" />
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
