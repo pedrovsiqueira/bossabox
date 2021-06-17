@@ -8,6 +8,10 @@
   border-radius: 5px;
   transition: background-color 200ms linear;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   &--blue {
     background-color: $btn-blue;
 
@@ -23,4 +27,23 @@
       background-color: darken($btn-red, 10%);
     }
   }
+}
+
+.btn--close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.btn--tools-icon {
+  background: transparent;
+  transition: filter 0.2s;
+  border: none;
 }
