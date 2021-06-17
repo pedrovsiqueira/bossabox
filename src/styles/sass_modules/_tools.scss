@@ -1,0 +1,31 @@
+.tools__container {
+  width: $tools-width;
+  height: $tools-height;
+  border: 1px solid $tools-border;
+
+  box-shadow: 0px 5px 7px $tools-box-shadow;
+  border-radius: 5px;
+
+  p {
+    padding-left: 2rem;
+  }
+}
+
+.tools__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 0;
+
+  &-icons {
+    display: flex;
+    button:first-child {
+      margin-right: 1rem;
+    }
+  }
+
+  h3,
+  a {
+    font-size: 1.8rem;
+    color: $tools-title;
+  }
+}
