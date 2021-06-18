@@ -24,7 +24,6 @@
 
     &:focus {
       background: $input-background-focused;
-      color: $input-text-focused;
       border: 1px solid $input-background-focused;
       transition: all 200ms ease;
     }
