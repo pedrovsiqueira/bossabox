@@ -15,7 +15,7 @@ export const Form = () => {
   return (
     <form className="App" onSubmit={handleSubmit(handleFormSubmit)}>
       <Input
-        maxLength={30}
+        maxLength={120}
         type="text"
         label="Tool name"
         placeholder="Please insert tool name"
@@ -40,7 +40,7 @@ export const Form = () => {
       />
 
       <Input
-        maxLength={120}
+        maxLength={250}
         type="textarea"
         label="Tool description"
         placeholder="Please insert tool description"
@@ -51,7 +51,7 @@ export const Form = () => {
       <Input
         type="text"
         label="Tags"
-        placeholder="Please insert tool tags"
+        placeholder="Please insert tool tags separated by commas"
         error={errors.tags?.message}
         {...register('tags', { required: 'Required Field' })}
       />
