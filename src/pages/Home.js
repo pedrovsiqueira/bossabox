@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { Button, ButtonIcon, Form, InputSearch, Modal, RemoveModal, ToolCard } from '../components';
-import closeImg from '../assets/close.svg';
+import { ReactComponent as CloseIcon } from '../assets/close.svg';
 import Loader from 'react-loader-spinner';
 import { ToolsContext } from '../hooks/toolsContext';
 
@@ -57,12 +57,7 @@ export const Home = () => {
           onRequestClose={handleNewToolModal}
           className="react__modal__content"
         >
-          <ButtonIcon
-            onClick={handleNewToolModal}
-            image={closeImg}
-            altText="Close modal"
-            className="btn--close-modal"
-          />
+          <ButtonIcon onClick={handleNewToolModal} Icon={CloseIcon} className="btn--close-modal" />
           <Form />
         </Modal>
 

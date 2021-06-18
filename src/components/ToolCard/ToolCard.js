@@ -1,6 +1,6 @@
 import { ButtonIcon, Tags } from '../index';
-import editImg from '../../assets/edit.svg';
-import deleteImg from '../../assets/delete.svg';
+import { ReactComponent as EditIcon } from '../../assets/edit.svg';
+import { ReactComponent as DeleteIcon } from '../../assets/delete.svg';
 
 export const ToolCard = ({ tool, handleEdit, handleDelete, className }) => {
   const { name, description, tags, url } = tool;
@@ -14,18 +14,8 @@ export const ToolCard = ({ tool, handleEdit, handleDelete, className }) => {
           </a>
         </h3>
         <div className="tools__header-icons">
-          <ButtonIcon
-            onClick={handleEdit}
-            image={editImg}
-            altText="Edit Tool"
-            className="btn--tools-icon"
-          />
-          <ButtonIcon
-            onClick={handleDelete}
-            image={deleteImg}
-            altText="Delete Tool"
-            className="btn--tools-icon"
-          />
+          <ButtonIcon onClick={handleEdit} Icon={EditIcon} className="btn--tools-icon" />
+          <ButtonIcon onClick={handleDelete} Icon={DeleteIcon} className="btn--tools-icon" />
         </div>
       </div>
       <p>{description}</p>

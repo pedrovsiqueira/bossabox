@@ -1,8 +1,7 @@
 import { useContext } from 'react';
 import { ButtonIcon, Modal, Button } from '../';
-import closeImg from '../../assets/close.svg';
-import removeImg from '../../assets/remove.svg';
-
+import { ReactComponent as CloseIcon } from '../../assets/close.svg';
+import { ReactComponent as RemoveIcon } from '../../assets/remove.svg';
 import { ToolsContext } from '../../hooks/toolsContext';
 
 export const RemoveModal = () => {
@@ -17,13 +16,12 @@ export const RemoveModal = () => {
     >
       <ButtonIcon
         onClick={() => setIsRemoving(prevState => !prevState)}
-        image={closeImg}
-        altText="Close modal"
+        Icon={CloseIcon}
         className="btn--close-modal"
       />
       <div className="modal__remove">
         <div className="modal__remove__header">
-          <img src={removeImg} alt="Remove Icon" />
+          <RemoveIcon />
           <h1>Remove Tool</h1>
         </div>
 
