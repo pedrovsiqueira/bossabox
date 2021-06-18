@@ -1,17 +1,24 @@
-import { useEffect, useState } from 'react';
-import { Button, ButtonIcon, Form, InputSearch, Modal, ToolCard } from '../components';
+import { useContext, useEffect } from 'react';
+import { Button, ButtonIcon, Form, InputSearch, Modal, RemoveModal, ToolCard } from '../components';
 import closeImg from '../assets/close.svg';
-import { api } from '../services/api';
 import Loader from 'react-loader-spinner';
+import { ToolsContext } from '../hooks/toolsContext';
 
 export const Home = () => {
-  const [isNewTool, setIsNewTool] = useState(false);
-  const [tools, setTools] = useState([]);
-  const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(false);
+  const {
+    loading,
+    tools,
+    setSearch,
+    setCurrentTool,
+    triggerFormModal,
+    setTriggerFormModal,
+    fetchData,
+    setIsRemoving
+  } = useContext(ToolsContext);
 
-  const handleNewToolModal = () => {
-    setIsNewTool(prevState => !prevState);
+  const handleNewToolModal = toolId => {
+    typeof toolId !== 'string' && setCurrentTool([]);
+    setTriggerFormModal(prevState => !prevState);
   };
 
   const handleSearch = event => {
@@ -19,22 +26,18 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    const fetchResults = async () => {
-      setLoading(true);
-      try {
-        const result = await api.get('/tools', { params: { name: search } });
-        setTools(result.data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    fetchData();
+  }, [fetchData]);
 
-    fetchResults();
-  }, [search]);
+  const handleEdit = tool => {
+    setCurrentTool(tool);
+    handleNewToolModal(tool._id);
+  };
 
-  console.log({ tools, loading });
+  const handleDelete = tool => {
+    setCurrentTool(tool);
+    setIsRemoving(true);
+  };
 
   return (
     <div className="container">
@@ -49,8 +52,8 @@ export const Home = () => {
         </Button>
       </div>
       <Modal
-        isNewTool={isNewTool}
-        handleNewToolModal={handleNewToolModal}
+        isOpen={triggerFormModal}
+        onRequestClose={handleNewToolModal}
         className="react__modal__content"
       >
         <ButtonIcon
@@ -62,7 +65,18 @@ export const Home = () => {
         <Form />
       </Modal>
 
-      {!loading && tools.length > 0 && tools.map(tool => <ToolCard tool={tool} />)}
+      <RemoveModal />
+
+      {!loading &&
+        tools.length > 0 &&
+        tools.map(tool => (
+          <ToolCard
+            handleEdit={() => handleEdit(tool)}
+            handleDelete={() => handleDelete(tool)}
+            tool={tool}
+            key={tool._id}
+          />
+        ))}
 
       <Loader type="Oval" color="#170c3a" height={100} width={100} visible={loading} />
     </div>
