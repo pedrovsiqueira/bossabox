@@ -80,6 +80,8 @@ export const Home = () => {
             />
           ))}
 
+        {tools.length === 0 && !loading && <p>No tools found, please add a new tool.</p>}
+
         <Loader type="Oval" color="#170c3a" height={100} width={100} visible={loading} />
       </div>
     </div>
