@@ -33,3 +33,26 @@
     }
   }
 }
+
+.modal__remove {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 1.2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+
+  &__header {
+    display: flex;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+}
