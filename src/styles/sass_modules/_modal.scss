@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 500px;
   background: $thm-background;
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
   border-radius: 0.24rem;
 
@@ -41,13 +41,17 @@
   &__header {
     align-items: center;
 
+    h1 {
+      font-size: 1.8rem;
+    }
+
     svg {
       margin: 0 1rem 3px 0;
     }
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 2.5rem 0;
     text-align: center;
   }
