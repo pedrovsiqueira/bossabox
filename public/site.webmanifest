@@ -1,6 +1,6 @@
 {
   "name": "Bossa Box by Pedro Siqueira",
-  "short_name": "Bossa Box",
+  "short_name": "Bossa Box by Pedro Siqueira",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,5 +15,7 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
 }
