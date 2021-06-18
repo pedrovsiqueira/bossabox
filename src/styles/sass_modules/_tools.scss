@@ -1,5 +1,6 @@
 .tools__container {
-  width: $tools-width;
+  width: 100%;
+  max-width: $tools-width;
   height: $tools-height;
   border: 1px solid $tools-border;
 

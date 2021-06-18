@@ -17,7 +17,8 @@
 
   &__search {
     display: flex;
-    width: $home-width;
+    width: 100%;
+    max-width: $home-width;
     justify-content: space-between;
     margin: 3.75rem 0;
   }
