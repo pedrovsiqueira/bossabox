@@ -2,16 +2,8 @@ import { ButtonIcon } from '../index';
 import editImg from '../../assets/edit.svg';
 import deleteImg from '../../assets/delete.svg';
 
-export const ToolCard = ({ tool }) => {
-  const { name, description, tags, url, _id: id } = tool;
-
-  const handleEdit = () => {
-    console.log(`edit ${(name, tags)}`);
-  };
-
-  const handleDelete = () => {
-    console.log(`delete ${id}`);
-  };
+export const ToolCard = ({ tool, handleEdit, handleDelete }) => {
+  const { name, description, tags, url } = tool;
 
   return (
     <div className="tools__container">
