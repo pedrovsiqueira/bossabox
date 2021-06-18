@@ -2,11 +2,11 @@ import { ButtonIcon, Tags } from '../index';
 import editImg from '../../assets/edit.svg';
 import deleteImg from '../../assets/delete.svg';
 
-export const ToolCard = ({ tool, handleEdit, handleDelete }) => {
+export const ToolCard = ({ tool, handleEdit, handleDelete, className }) => {
   const { name, description, tags, url } = tool;
 
   return (
-    <div className="tools__container">
+    <div className={`tools__container ${className ? className : ''}`}>
       <div className="tools__header">
         <h3>
           <a target="_blank" rel="noreferrer" href={url}>
@@ -29,7 +29,7 @@ export const ToolCard = ({ tool, handleEdit, handleDelete }) => {
         </div>
       </div>
       <p>{description}</p>
-      <Tags />
+      <Tags tags={tags} />
     </div>
   );
 };
