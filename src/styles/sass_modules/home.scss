@@ -1,9 +1,15 @@
 .container {
+  margin-top: 2rem;
+  padding: 0 2rem;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   h1 {
     font-size: 2rem;
@@ -12,7 +18,11 @@
   &__search {
     display: flex;
     width: $home-width;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 3.75rem 0;
   }
+}
+
+.list__tool-card {
+  margin-bottom: 2rem;
 }

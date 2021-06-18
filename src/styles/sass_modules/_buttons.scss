@@ -1,16 +1,11 @@
 .btn {
   font-size: $btn-font-size;
-  height: $btn-height;
   width: $btn-width;
   color: $btn-font-color;
   text-align: center;
   border: none;
   border-radius: 5px;
   transition: background-color 200ms linear;
-
-  &:disabled {
-    cursor: not-allowed;
-  }
 
   &--blue {
     background-color: $btn-blue;
@@ -26,6 +21,11 @@
     &:hover {
       background-color: darken($btn-red, 10%);
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $btn-grey;
   }
 }
 
