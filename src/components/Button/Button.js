@@ -1,4 +1,4 @@
-export const Button = ({ children, type, onClick, color, icon, disabled }) => (
+export const Button = ({ children, type, onClick, color, disabled }) => (
   <button
     disabled={disabled}
     type={type || 'button'}
