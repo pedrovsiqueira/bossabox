@@ -1,9 +1,9 @@
 import ReactModal from 'react-modal';
 
-export const Modal = ({ isNewTool, handleNewToolModal, children, className }) => (
+export const Modal = ({ isOpen, onRequestClose, children, className }) => (
   <ReactModal
-    isOpen={isNewTool}
-    onRequestClose={handleNewToolModal}
+    isOpen={isOpen}
+    onRequestClose={onRequestClose}
     overlayClassName="react__modal__overlay"
     className={className}
     ariaHideApp={false}
