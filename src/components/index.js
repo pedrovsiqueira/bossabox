@@ -4,4 +4,6 @@ export { Input } from './Input/Input';
 export { InputSearch } from './Input/InputSearch';
 export { Form } from './Form/Form';
 export { Modal } from './Modal/Modal';
+export { RemoveModal } from './Modal/RemoveModal';
 export { ToolCard } from './ToolCard/ToolCard';
+export { Tags } from './Tags/Tags';
