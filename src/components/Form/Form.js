@@ -1,28 +1,16 @@
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { api } from '../../services/api';
+import { ToolsContext } from '../../hooks/toolsContext';
 import { Input, Button } from '../index';
+import { validUrl } from './form.service';
 
 export const Form = () => {
+  const { currentTool, handleFormSubmit } = useContext(ToolsContext);
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting }
-  } = useForm();
-
-  const validUrl = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/;
-
-  const handleFormSubmit = async values => {
-    const { name, description, url, tags } = values;
-
-    const payload = {
-      name,
-      description,
-      url,
-      tags: [tags]
-    };
-
-    await api.post('/tools', payload);
-  };
+  } = useForm({ defaultValues: currentTool });
 
   return (
     <form className="App" onSubmit={handleSubmit(handleFormSubmit)}>
