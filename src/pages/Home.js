@@ -29,8 +29,8 @@ export const Home = () => {
     fetchData();
   }, [fetchData]);
 
-  const handleEdit = tool => {
-    setCurrentTool(tool);
+  const handleEdit = ({ tags, ...tool }) => {
+    setCurrentTool({ ...tool, tags: tags.join(', ') });
     handleNewToolModal(tool._id);
   };
 
@@ -41,44 +41,47 @@ export const Home = () => {
 
   return (
     <div className="container">
-      <div>
-        <h1>VUTTR</h1>
-        <h1>Very Useful Tools To Remember</h1>
-      </div>
-      <div className="container__search">
-        <InputSearch placeholder="Type what you're looking for" onChange={handleSearch} />
-        <Button onClick={handleNewToolModal} color="blue" className="react-modal-close">
-          Add tool
-        </Button>
-      </div>
-      <Modal
-        isOpen={triggerFormModal}
-        onRequestClose={handleNewToolModal}
-        className="react__modal__content"
-      >
-        <ButtonIcon
-          onClick={handleNewToolModal}
-          image={closeImg}
-          altText="Close modal"
-          className="btn--close-modal"
-        />
-        <Form />
-      </Modal>
-
-      <RemoveModal />
-
-      {!loading &&
-        tools.length > 0 &&
-        tools.map(tool => (
-          <ToolCard
-            handleEdit={() => handleEdit(tool)}
-            handleDelete={() => handleDelete(tool)}
-            tool={tool}
-            key={tool._id}
+      <div className="content">
+        <div>
+          <h1>VUTTR</h1>
+          <h1>Very Useful Tools To Remember</h1>
+        </div>
+        <div className="container__search">
+          <InputSearch placeholder="Type what you're looking for" onChange={handleSearch} />
+          <Button onClick={handleNewToolModal} color="blue" className="react-modal-close">
+            Add tool
+          </Button>
+        </div>
+        <Modal
+          isOpen={triggerFormModal}
+          onRequestClose={handleNewToolModal}
+          className="react__modal__content"
+        >
+          <ButtonIcon
+            onClick={handleNewToolModal}
+            image={closeImg}
+            altText="Close modal"
+            className="btn--close-modal"
           />
-        ))}
+          <Form />
+        </Modal>
 
-      <Loader type="Oval" color="#170c3a" height={100} width={100} visible={loading} />
+        <RemoveModal />
+
+        {!loading &&
+          tools.length > 0 &&
+          tools.map(tool => (
+            <ToolCard
+              handleEdit={() => handleEdit(tool)}
+              handleDelete={() => handleDelete(tool)}
+              tool={tool}
+              key={tool._id}
+              className="list__tool-card"
+            />
+          ))}
+
+        <Loader type="Oval" color="#170c3a" height={100} width={100} visible={loading} />
+      </div>
     </div>
   );
 };
