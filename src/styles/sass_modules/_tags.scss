@@ -1,0 +1,22 @@
+.tags {
+  width: 100%;
+  padding: 2rem;
+
+  &__container {
+    display: flex;
+  }
+}
+
+.tag {
+  padding: 0.3rem;
+  border: 1px solid $tag-border-color;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 5px;
+
+  img {
+    width: 0.8rem;
+    margin-left: 5px;
+  }
+}

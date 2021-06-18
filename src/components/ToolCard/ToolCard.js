@@ -1,4 +1,4 @@
-import { ButtonIcon } from '../index';
+import { ButtonIcon, Tags } from '../index';
 import editImg from '../../assets/edit.svg';
 import deleteImg from '../../assets/delete.svg';
 
@@ -29,6 +29,7 @@ export const ToolCard = ({ tool, handleEdit, handleDelete }) => {
         </div>
       </div>
       <p>{description}</p>
+      <Tags />
     </div>
   );
 };
