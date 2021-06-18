@@ -52,3 +52,7 @@ strong {
 button {
   cursor: pointer;
 }
+
+.Toastify__toast--success {
+  background-color: $toast-success-color !important;
+}

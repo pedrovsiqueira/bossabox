@@ -24,7 +24,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const notifySuccess = message => {
-    toast.info(message, { ...toastMessageDefaults });
+    toast.success(message, { ...toastMessageDefaults });
   };
 
   const notifyError = message => {
