@@ -1,6 +1,8 @@
 # BossaBox
 
-![image](https://user-images.githubusercontent.com/49031534/122771310-b0dd4180-d27c-11eb-98d9-40cc39bb4ce4.png)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/49031534/122771310-b0dd4180-d27c-11eb-98d9-40cc39bb4ce4.png" />
+</div>
 
 ## About The Project
 
