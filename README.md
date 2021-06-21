@@ -1,5 +1,14 @@
 # BossaBox
 
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/pedrovsiqueira/bossabox">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedrovsiqueira/bossabox">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedrovsiqueira/bossabox">
+  <a href="https://github.com/pedrovsiqueira/bossabox/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedrovsiqueira/bossabox">
+  </a>
+</p>
+
 <div align="center">
   <img src="https://user-images.githubusercontent.com/49031534/122771310-b0dd4180-d27c-11eb-98d9-40cc39bb4ce4.png" />
 </div>
