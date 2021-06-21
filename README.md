@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# BossaBox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Desafio 2Sow ](/public/2Sow.png)
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+The challenge was to build a system to save useful tools to remember. It's a basic CRUD to practice SASS and unit testing.
 
-### `yarn start`
+### Built With:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Javascript](https://www.javascript.com/) - An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+- [ReactJS](https://pt-br.reactjs.org/) - A JavaScript library for building user interfaces.
+- [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [React-Hook-Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- USAGE EXAMPLES -->
 
-### `yarn test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project is deployed and can be accessed at https://bossa-box-react.netlify.app/
 
-### `yarn build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- PLACEHOLDER FOR PROJECT OVERVIEW -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `yarn eject`
+In order to run this project locally you will need to:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Clone and install this repository - https://github.com/pedrovsiqueira/bossabox
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone the repo
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+git clone https://github.com/pedrovsiqueira/bossabox
+```
 
-## Learn More
+2. Install YARN packages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+yarn
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Rename the file .env-example to .env
 
-### Code Splitting
+4. Run the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+yarn start
+```
 
-### Analyzing the Bundle Size
+5. Make sure the following port is available:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+PORTS: 3000.
+```
 
-### Making a Progressive Web App
+6. Access the application through the following link afer doing the steps 1 - 5.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+http://localhost:3000/
+```
 
-### Advanced Configuration
+### Tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Tests were done using jest and react-testing-library. The tests are still ongoing. To see the tests run the following commands:
 
-### Deployment
+1. Test results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+yarn test
+```
 
-### `yarn build` fails to minify
+2. Test results using coverage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+yarn test:coverage
+```
+
+<!-- CONTACT -->
+
+## Contact
+
+Pedro Siqueira - [email](mailto:pedro.v.siqueira@gmail.com) - [linkedin](https://www.linkedin.com/in/pedrovsiqueira/) - [portfolio](http://pedrosiqueira.com.br/)
