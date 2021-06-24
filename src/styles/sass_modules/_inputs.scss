@@ -101,6 +101,10 @@
 
   &__input {
     padding-left: 45px;
+
+    &::-webkit-search-cancel-button:hover {
+      cursor: pointer;
+    }
   }
 }
 
