@@ -13,6 +13,7 @@ export const Home = () => {
     triggerFormModal,
     setTriggerFormModal,
     fetchData,
+    search,
     setIsRemoving
   } = useContext(ToolsContext);
 
@@ -39,6 +40,10 @@ export const Home = () => {
     setIsRemoving(true);
   };
 
+  const onTagClick = tag => {
+    setSearch(tag);
+  };
+
   return (
     <div className="container">
       <div className="content">
@@ -47,7 +52,11 @@ export const Home = () => {
           <h1>Very Useful Tools To Remember</h1>
         </div>
         <div className="container__search">
-          <InputSearch placeholder="Type what you're looking for" onChange={handleSearch} />
+          <InputSearch
+            value={search}
+            placeholder="Type what you're looking for"
+            onChange={handleSearch}
+          />
           <Button onClick={handleNewToolModal} color="blue" className="react-modal-close">
             Add tool
           </Button>
@@ -72,6 +81,7 @@ export const Home = () => {
               tool={tool}
               key={tool._id}
               className="list__tool-card"
+              onTagClick={onTagClick}
             />
           ))}
 

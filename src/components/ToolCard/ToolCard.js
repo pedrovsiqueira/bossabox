@@ -2,7 +2,7 @@ import { ButtonIcon, Tags } from '../index';
 import { ReactComponent as EditIcon } from '../../assets/edit.svg';
 import { ReactComponent as DeleteIcon } from '../../assets/delete.svg';
 
-export const ToolCard = ({ tool, handleEdit, handleDelete, className }) => {
+export const ToolCard = ({ tool, handleEdit, handleDelete, className, onTagClick }) => {
   const { name, description, tags, url } = tool;
 
   return (
@@ -19,7 +19,7 @@ export const ToolCard = ({ tool, handleEdit, handleDelete, className }) => {
         </div>
       </div>
       <p>{description}</p>
-      <Tags tags={tags} />
+      <Tags tags={tags} onClick={onTagClick} />
     </div>
   );
 };
