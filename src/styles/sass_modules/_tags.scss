@@ -2,23 +2,23 @@
   width: 100%;
   padding: 2rem;
 
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tag {
-  padding: 0.3rem;
+  padding: 0.5rem;
   border: 1px solid $tag-border-color;
-  display: flex;
-  align-items: center;
   border-radius: 5px;
-  margin-right: 5px;
 
-  img {
-    width: 0.8rem;
-    margin-left: 5px;
+  background: none;
+  color: $thm-text;
+  font-weight: 600;
+  transition: background-color 200ms linear;
+
+  &:hover {
+    transition: background-color 200ms linear;
+    background-color: $tag-hover-color;
   }
 }

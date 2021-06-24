@@ -1,11 +1,9 @@
-export const Tags = ({ tags }) => (
+export const Tags = ({ tags, onClick }) => (
   <div className="tags">
-    <div className="tags__container">
-      {tags.map((tag, index) => (
-        <div key={index} className="tag">
-          <span>#{tag}</span>
-        </div>
-      ))}
-    </div>
+    {tags.map((tag, index) => (
+      <button key={index} className="tag" onClick={() => onClick(tag)}>
+        #{tag}
+      </button>
+    ))}
   </div>
 );
