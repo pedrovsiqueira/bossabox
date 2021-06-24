@@ -34,7 +34,7 @@ const ContextProvider = ({ children }) => {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const result = await api.get('/tools', { params: { name: debouncedSearch } });
+      const result = await api.get('/tools', { params: { search: debouncedSearch } });
       setTools(result.data);
     } catch (error) {
       notifyError('Error while loading the data');
@@ -83,7 +83,7 @@ const ContextProvider = ({ children }) => {
     const { _id: id } = currentTool;
 
     try {
-      await api.delete(`/tools/${id}`, { params: { name: search } });
+      await api.delete(`/tools/${id}`);
       notifySuccess('Tool removed successfully');
       setIsRemoving(false);
       setTools(prevTools => prevTools.filter(tool => tool._id !== id));
@@ -107,7 +107,8 @@ const ContextProvider = ({ children }) => {
         handleFormSubmit,
         setIsRemoving,
         isRemoving,
-        handleToolRemoval
+        handleToolRemoval,
+        search
       }}
     >
       {children}
