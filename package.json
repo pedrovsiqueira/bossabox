@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "test:coverage": "jest --coverage && open coverage/lcov-report/index.html",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
